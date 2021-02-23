@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Cantata+One|Open+Sans:300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cantata+One|Open+Sans:300,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css">
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -79,7 +79,7 @@
 			var userID =prompt("Enter your behance username :");
 	
 			(function() {
-				var behanceUserAPI = 'http://www.behance.net/v2/users/'+ userID +'?callback=?&api_key='+ apiKey;
+				var behanceUserAPI = 'https://www.behance.net/v2/users/'+ userID +'?callback=?&api_key='+ apiKey;
 				function setUserTemplate() {
 					var userData     = JSON.parse(sessionStorage.getItem('behanceUser')),
 						getTemplate = $('#profile-template').html(),
@@ -113,7 +113,7 @@
 	
 			(function() {
 				var perPage = 100;
-				var behanceProjectAPI = 'http://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
+				var behanceProjectAPI = 'https://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
 	
 				function setPortfolioTemplate() {
 					var projectData = JSON.parse(sessionStorage.getItem('behanceProject')),
@@ -137,7 +137,7 @@
 			$('#portfolio').on('click', '.portfolio-cover', function() {
 				var $this =	$(this),
 					projectID = $this.data('project-id'),
-					beProjectContentAPI = 'http://www.behance.net/v2/projects/'+ projectID +'?callback=?&api_key=' + apiKey,
+					beProjectContentAPI = 'https://www.behance.net/v2/projects/'+ projectID +'?callback=?&api_key=' + apiKey,
 					keyName = 'behanceProjectImages-' + projectID;
 				
 				function showGallery(dataSource) {	
